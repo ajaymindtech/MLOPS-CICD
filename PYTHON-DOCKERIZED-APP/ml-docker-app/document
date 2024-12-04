@@ -1,0 +1,44 @@
+docker build -t ml-docker-app .
+docker run -p 5001:50001 ml-docker-app
+curl http://localhost:5001
+
+
+docker images
+docker image rm <image_id>
+docker image prune
+docker container prune
+docker container ls
+docker container stop <container_id>
+docker container rm <container_id>
+docker container rm $(docker container ls -aq)
+docker container rm $(docker container ls -aq)
+
+docker push <username>/ml-docker-app
+docker pull <username>/ml-docker-app
+
+docker pull ajdevopssolutions/ml-docker-app:v1
+docker run -p 5001:50001 ajaybongani/ml-docker-app
+
+
+
+python app.py
+
+pip install flask
+pip install scikit-learn
+pip install pandas
+pip install numpy
+pip install gunicorn
+pip install docker
+
+docker login
+docker tag ml-docker-app <username>/ml-docker-app
+docker tag ml-docker-app ajaybongani/ml-docker-app
+
+
+docker push <username>/ml-docker-app
+docker push ajaybongani/ml-docker-app
+
+docker run -p 5001:50001 ajaybongani/ml-docker-app
+
+
+
